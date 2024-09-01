@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+        integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="portfolio">
+                <p>
+                    Portfólio 
+                </p>
+                <a href="index.html">
+                    Carla<br>
+                    <span>Regina</span>
+                </a>
+            </div><!--Fim portfólio-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato" class="contato">Contato</a></li>
+                    
+                </ul>
+            </nav> <!--Fim menu-desktop-->           
+        </div>  <!--Fim interface-->  
+    </header>
+
+    <main>
+        <section class="inicio" id="inicio">
+            <div>
+                <img src="images/perfil.png" alt="minha imagem de perfil" class="img-perfil">
+            </div>
+            <div>
+                <h2 class="titulo-inicio">Objetivos foram criados para serem alcançados</h2>
+                <p>Com um desejo contínuo de aprender, sempre preparada para enfrentar novos
+                    desafios e contribuir com soluções inovadoras. Determinada em crescer, 
+                    mostrando paixão e comprometimento em meus projetos.
+                </p>                
+            </div>
+        </section><!--Fim inicio-->
+
+
+        <section class="sobre" id="sobre">
+            <div>
+                <h2>Um pouco sobre mim</h2>
+                <p>
+                    Desde jovem, sempre fui fascinada pelo mundo da tecnologia.
+                </p>
+                <p>
+                    Atualmente, estou focada em me especializar em Análise e Desenvolvimento de Sistemas, 
+                    uma escolha que reflete meu desejo de participar ativamente na criação de soluções tecnológicas que
+                    impactem positivamente a sociedade.
+                </p>
+                <p>
+                    O que mais me motiva na área de TI é a oportunidade de solucionar desafios
+                    complexos e colaborar com pessoas que compartilham da mesma paixão pela 
+                    tecnologia. Estou comprometida em continuar aprendendo e contribuindo para projetos que façam a diferença.
+                </p>
+            </div>
+        </section><!--Fim sobre-->
+
+
+        <section class="projetos" id="projetos">
+            <h2>meus projetos</h2>
+            <div class="area-projetos">
+                <h3>
+                    1. Efeito texto sendo digitado
+                </h3>
+                <div class="txt-animado">                    
+                    Você <span></span>
+                </div> <!--Fim Projeto Efeito texto sendo digitado-->
+
+
+                <h3>
+                    2. Efeito card 3D
+                </h3>
+                <div class="container">
+                    
+                        <div class="card card1">
+                            <h2>TÊNIS AZUL</h2>
+                            <img src="images/tenis_azul.png" alt="card 3d de um tenis azul" class="produto">
+                            <button>COMPRAR</button>
+                        </div>
+                </div><!--Fim Projeto Efeito card 3D-->  
+            </div>
+        </section><!--Fim Projetos-->
+
+
+        <section class="formulario" id="contato">
+            <div>
+                <h2 class="titulo">FALE COMIGO</h2>
+
+                <form action="">
+                    Nome:<input type="text" name="" id="" placeholder="" required>
+                    E-mail:<input type="text" name="" id="" placeholder="" required>
+                    Celular:<input type="text" name="" id="" placeholder="">
+                    Mensagem:<textarea name="" id="" placeholder="" required></textarea>
+                    
+                    <input type="submit" value="ENVIAR" class="btn-enviar">
+                </form>
+            </div>
+        </section><!--fim formulario-->        
+    </main>
+
+    <footer>
+        <div>
+            <hr>
+            <img src="images/assinatura.png" alt="assinatura" class="assinatura">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

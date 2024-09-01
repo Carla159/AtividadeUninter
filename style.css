@@ -1,0 +1,339 @@
+/* ESTILOS GERAIS */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-image: url(images/plano_fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    width: 80%;
+    height: 100%;
+    margin: 10px auto;
+    background-color: #000;
+    border-radius: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+li{
+    list-style-type: none;
+}
+
+header, main{
+    padding: 30px;
+}
+
+h2{
+    color: #ED2C97;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+
+/* CONFIG TOPO/ CABEÇALHO */
+/* Nome */
+header .interface{
+    display: flex;
+    justify-content: space-between;
+}
+
+.interface .portfolio p{
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 50px;
+}
+
+.interface .portfolio a{
+    color: #ED2C97;
+    font-size: 25px;
+    margin-left: 45px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 10px #f44ba8f3;
+}
+
+.interface .portfolio span{
+    margin-left: 61px; 
+    display: block;
+    margin-top: -10px;
+}
+
+
+/* Botões de navegação */
+nav.menu-desktop ul li{
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-desktop ul li a.contato{
+    color: #ED2C97;
+    text-shadow: 0 0 5px #f44ba8f3;
+}
+/* FIM CONFIG TOPO/ CABEÇALHO */
+
+
+
+/* SEÇÃO INICIO */
+section.inicio{
+    padding: 20px 4%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.inicio img.img-perfil{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px #f44ba8f3);
+}
+
+.inicio p{
+    color: #ffffffcf;
+    text-align: justify;
+    margin: 10px 30px;
+}
+
+.titulo-inicio{
+    margin: 0 auto;
+    text-transform: none;
+}
+
+
+/* SEÇÃO SOBRE */
+section.sobre{
+    padding: 20px 4%;
+}
+
+.sobre p{
+    color: #fff;
+    text-align: justify;
+    margin: 10px;
+}
+/* FIM SEÇÃO SOBRE */
+
+
+/* SEÇÃO PROJETOS */
+section.projetos{
+    padding: 20px 4%;
+    align-items: center;
+    max-width: 700px;
+    margin: auto;
+    line-height: 40px;
+}
+
+h3{
+    color: #ED2C97;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Projeto texto sendo digitado*/
+.txt-animado{
+    font-size: 25px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
+
+.txt-animado span{
+    position: relative;
+}
+
+.txt-animado span::before{
+    content: "";
+    color: crimson;
+    animation: palavras 20s infinite;
+}
+
+.txt-animado span::after{
+    content: "";
+    position: absolute;
+    height: 120%;
+    border-left: 2px solid crimson;
+    right: -10px;
+    opacity: 1;
+    animation: cursor .10s infinite, digitar 20s steps(15) infinite;
+    width: calc(100% + 16px);
+    background-color: #000;
+}
+
+@keyframes digitar {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 16px);
+    }
+}
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid #212121;
+    }
+}
+
+@keyframes palavras{
+    0%,20%{
+        content: "se divertiu?";
+    }
+    21%,40%{
+        content: "pode sorrir verdadeiramente hoje?";
+    }
+    41%,60%{
+        content: "pode ser feliz, sabe?";
+    }
+    61%,80%{
+        content: "pode sorrir sim!!";
+    }
+    81%,100%{
+        content: "é incrivelmente maravilhoso(a)!!!";        
+    }
+}
+/* fim projeto texto sendo digitado */
+
+/* PROJETO CARD 3D */
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+.container .card{
+    width: 170px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 30px;
+    transform-style: preserve-3d;
+}
+
+.container .card h2{
+    color: #fff;
+    transform-style: preserve-3d;
+}
+
+.container .card img.produto{
+    max-width: 200px;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.container .card:hover img.produto, .container .card:hover button{
+    transform: translate3d(0,0,100px);
+}
+
+.container .card button{
+    padding: 10px 30px;
+    background-color: #00b938;
+    border: 0;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.container div.card1{
+    background-image: linear-gradient(45deg, #003cff, #00f7ff);
+}
+
+.container div.card2{
+    background-image: linear-gradient(45deg, #be3b57, #ff7392);
+}
+/* fim projeto card 3d */
+
+/* FIM SEÇÃO PROJETOS */
+
+
+
+/* SEÇÃO CONTATO */
+
+section.formulario{
+    padding: 20px 4%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.formulario form{
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #ED2C97;
+    width: 300px;
+    border: none;
+    gap: 10px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    color: #000;
+    font-size: 13px;
+    height: 25px;
+}
+
+form textarea{
+    resize: none;
+    height: 100px;
+}
+
+section.formulario input:focus, textarea:focus{
+    border: 1px solid #ED2C97;   
+} 
+
+form input.btn-enviar{
+    width: 150px;
+    height: 35px;
+    background-color: #ED2C97;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px auto;
+    box-shadow: 0 0 10px #f44ba8f3;
+}
+/* FIM SEÇÃO CONTATO */
+
+
+/* FOOTER */
+footer{
+    padding: 40px 4%;   
+    margin-top: -70px; 
+}
+
+footer hr{
+    border: 1px solid #ED2C97;
+}
+
+footer img.assinatura{
+    padding: 5px 0;
+    width: 70px;
+    height: 30px;
+    float: right;       
+}
